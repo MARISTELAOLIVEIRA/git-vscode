@@ -137,16 +137,17 @@ conferir_4() {   # README editado pelo site + nova seção enviada do computador
     return 1
   fi
   [ "$tem_aprendi" = 1 ] || return 1
-  # o commit do "colega" (README pelo site) e o último commit do aluno no sobre-mim.md
-  local sha_site sha_aluno
-  sha_site="$(git log -1 --format=%H -S 'ditado no site' -- README.md)"
-  sha_aluno="$(git log -1 --format=%H -- sobre-mim.md)"
-  if [ "$(git log -1 --format=%ce "$sha_aluno")" = "$EMAIL_SITE" ]; then
+  # a seção "O que eu aprendi" tem que ter sido escrita no computador
+  local sha_aprendi
+  sha_aprendi="$(git log -1 --format=%H -S 'O que eu aprendi' -- sobre-mim.md)"
+  if [ "$(git log -1 --format=%ce "$sha_aprendi")" = "$EMAIL_SITE" ]; then
     DICA="A seção \"O que eu aprendi\" foi escrita **pelo site**. Escreva no VS Code: faça **Sync Changes** para puxar, edite o \`sobre-mim.md\` no seu computador, faça o commit e envie."
     return 1
   fi
-  # o commit do aluno precisa vir DEPOIS do commit do colega (ou seja, ele puxou antes de enviar)
-  if ! git merge-base --is-ancestor "$sha_site" "$sha_aluno"; then
+  # o último commit enviado (HEAD) tem que ter saído do computador do aluno.
+  # Como o "colega" mudou o GitHub, o aluno só consegue enviar algo depois de puxar
+  # (Sync Changes): seja escrevendo depois do pull, seja juntando as mudanças (merge).
+  if [ "$(git log -1 --format=%ce HEAD)" = "$EMAIL_SITE" ]; then
     DICA="Você escreveu \"O que eu aprendi\" **antes** de o \"colega\" editar o README, então ainda não treinou o *pull*. No VS Code, clique em **Sync Changes** para puxar a mudança do colega, acrescente mais uma frase em \"O que eu aprendi\", faça o commit e envie de novo."
     return 1
   fi
