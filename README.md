@@ -1,4 +1,4 @@
-# 💻 Git no VS Code: o dia a dia
+# <img src="https://maristelaoliveira.github.io/assets/img/octocat-stela.webp" width="40" height="40" alt="Octocat da Stela" align="absmiddle"> 💻 Git no VS Code: o dia a dia
 
 <img src="https://maristelaoliveira.github.io/curso-github/assets/memoji.png" width="90" align="right" alt="Memoji da Profª Stela">
 
