@@ -26,6 +26,8 @@ Nos projetos das disciplinas, é exatamente isso, e o histórico de commits most
 
 Lá você **baixa a imagem** do certificado e vê quantos cursos da trilha já concluiu. (Se ele ainda não aparecer, espere uns minutinhos: o GitHub leva um tempo para registrar a conclusão.)
 
+📌 Para você não se perder: acabei de colocar o botão **🎓 Ver meu certificado** no **README do seu repositório**. É só abrir a página principal dele, a qualquer hora.
+
 💼 Concluindo os **três** cursos práticos, você ganha o [certificado da trilha completa](https://maristelaoliveira.github.io/curso-github/certificado.html?aluno={{usuario}}&curso=trilha), que vai para o seu **LinkedIn**. Todos os seus estão em [Meus certificados](https://maristelaoliveira.github.io/curso-github/certificado.html).
 
 Vou fechar esta issue como concluída. Até a próxima! ⭐
