@@ -7,6 +7,8 @@ Curso prático da **Profª Maristela Oliveira** (pode chamar de Stela 😉) · F
 Aqui você trabalha como no dia a dia de quem programa: **no seu computador, com o VS Code**, enviando as mudanças para o GitHub.
 **A cada tarefa, eu confiro automaticamente e respondo com o próximo passo.** ⏱️ uns 30 minutos.
 
+> 🏠 **Este é o último curso da trilha e é para fazer em casa:** precisa do **Git e do VS Code instalados** no seu computador. Fez os outros dois (Minha primeira entrega e Trabalho em equipe)? Aqui você completa a trilha! 🏆
+
 ## ✅ Antes de começar
 
 - **Git instalado:** no terminal do VS Code, `git --version` mostra a versão
